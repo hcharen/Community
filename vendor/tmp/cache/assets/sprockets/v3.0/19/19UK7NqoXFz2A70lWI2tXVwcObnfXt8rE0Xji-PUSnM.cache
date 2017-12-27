@@ -1,0 +1,36 @@
+I"å(function() {
+  document.addEventListener('turbolinks:load', function() {
+    var cancelItemPopover, itemForm, itemName, itemPopover, openItemButton;
+    if (document.getElementById('new-item-form')) {
+      openItemButton = document.getElementById('new-item-button');
+      itemPopover = document.getElementById('new-item-popover');
+      itemForm = document.getElementById('new-item-form');
+      itemName = document.getElementById('item-name-input');
+      if (openItemButton && itemPopover) {
+        openItemButton.addEventListener('click', (function() {
+          if (itemPopover.classList.contains('is-hidden')) {
+            return itemPopover.classList.remove('is-hidden');
+          } else {
+            return null;
+          }
+        }), false);
+        cancelItemPopover = document.getElementById('cancel-item-popover');
+        cancelItemPopover.addEventListener('click', (function() {
+          return itemPopover.classList.add('is-hidden');
+        }), false);
+      }
+      itemForm.addEventListener('ajax:error', function(xhr, status, err) {
+        var errorNode, errorTextNode;
+        console.log(xhr);
+        itemName.classList.add('is-invalid');
+        errorNode = document.createElement('div');
+        errorTextNode = document.createTextNode('Name must not be blank');
+        errorNode.classList.add('invalid-feedback');
+        errorNode.appendChild(errorTextNode);
+        itemName.parentNode.insertBefore(errorNode, itemName.nextSibling);
+      });
+    }
+  });
+
+}).call(this);
+:ET

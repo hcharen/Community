@@ -1,0 +1,87 @@
+// Place all the styles related to the Item controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home {
+  h3 {
+    font-size: 1.25em;
+    color: #aa9c84;
+  }
+
+  .home-header {
+    margin-bottom: 3rem;
+    margin-top: 5%;
+  }
+}
+
+#item-list {
+  margin-top: 1.5%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
+
+.item-title {
+  margin-bottom: 3rem;
+}
+
+.item-col, .feature-col {
+  margin-bottom: 1.5rem;
+}
+
+.item-col {
+  margin-bottom: 1.5rem;
+
+}
+
+.item-card {
+  display: block;
+  color: #283c46;
+  background-color: #fff;
+  box-shadow: 0 1px 2px #aa9c84;
+  border-radius: 6px;
+  padding: .5rem;
+  height: 100%;
+
+
+
+&:hover {
+  text-decoration: none;
+  color: #283c46;
+}
+
+
+  h4 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.item-nav {
+  text-align: center;
+  font-size: 1.6rem;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+
+.item-popover {
+  width: 220px;
+  position: absolute;
+  top: 3rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.25);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  z-index: 1;
+  background-color: #fff;
+  padding: 1rem 1rem 2rem;
+}
+
+.is-hidden {
+  display: none;
+}

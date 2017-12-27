@@ -1,0 +1,29 @@
+
+// container(uterus) that has all the items in the mommy index.
+var itemList = document.getElementById('item-list');
+
+// represents the 'hidden' creature(create) form
+var itemPopover = document.getElementById('new-item-popover');
+
+// form input
+var itemNameInput = document.getElementById('item-name-input');
+
+// represents the item preview card that will show on the item#index, this will be inside of a div, and  since it is a string, the ruby tags will werk their magic ;)
+
+var newItem = "<%= escape_javascript(render "item_card.html", item: @item) %>";
+
+// create a new div for the new baby item!
+var div = document.createElement('div');
+
+// put the newitem in it's new div home
+div.innerHTML = newItem;
+
+// add the new baby item to the mommy index
+
+itemList.appendChild(div.firstChild);
+
+// Puts the create popover back... over, by restoring class='is-hidden'
+itemPopover.classList.add('is-hidden');
+
+// this resets the input value to nothing
+itemNameInput.value = '';

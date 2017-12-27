@@ -1,0 +1,10 @@
+<%# THIS IS THE PREVIEW CARD PARTIAL. ONE THE INDEX, ONE WILL BE RENDERED FOR EACH ITEM! %>
+
+<div class="col-md-4 item-col">
+   <%= link_to(item, class: "item-card") do %>
+    <h4><%= item.short_desc %></h4>
+      <% if item.description %>
+        <p><%= item.description %></p>
+        <% end %>
+      <% end %>
+  </div>
