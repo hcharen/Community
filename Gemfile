@@ -7,6 +7,10 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'sunspot_solr'
+
+gem 'sunspot_rails'
+
 gem 'rb-readline'
 
 gem 'jquery-rails'

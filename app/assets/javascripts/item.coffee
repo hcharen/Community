@@ -1,6 +1,7 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
+
 # We have to make sure turbolinks is loaded before we work our magic
 document.addEventListener 'turbolinks:load', ->
   if document.getElementById('new-item-form')
