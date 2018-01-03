@@ -1,0 +1,32 @@
+<main class="container-home">
+
+  <div class="jumbotron">
+
+    <div class="container text-center">
+
+      <h1><u>Important Information</u></h1>
+      <p>Bit 'O' Woods Farm</p>
+
+    </div>
+  </div>
+
+  <%= render "layouts/navbar.html" %>
+  <div class="container-fluid">
+
+  <%= render "posts/sidebar.html" %>
+
+
+        <div class="col-sm-9">
+
+          <%= link_to "Click here to post New Information!", new_post_path %>
+          <br>
+          <br>
+
+          <% @posts.each do |post| %>
+            <%= render 'post', post: post %>
+          <% end %>
+
+      </div>
+
+    </div>
+</main>

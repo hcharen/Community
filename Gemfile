@@ -6,7 +6,11 @@ git_source(:github) do |repo_name|
 end
 
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'\
+gem 'simple_form'
+
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
 gem 'sunspot_solr'
 
 gem 'sunspot_rails'

@@ -2,7 +2,7 @@
 <main class="container-home">
   <div class="jumbotron">
     <div class="container text-center">
-      <h1><u>Community</u></h1>
+      <h1><u>Tack Trunk</u></h1>
       <p>Bit 'O' Woods Farm</p>
     </div>
   </div>
@@ -14,15 +14,18 @@
     <div class="col-md-1 mr-auto">
       <button id="new-item-button" class="btn btn-primary mr-auto">New</button>
       <div id="new-item-popover" class="item-popover is-hidden">
-         <%= form_with(model: @item, id: "new-item-form", remote: true) do |f| %>
+         <%= form_with(model: @item, id: "new-item-form", multipart: true, remote: true) do |f| %>
          <div class="form-group">
           <%= f.text_field :short_desc, class: "form-control", id: "item-name-input", placeholder: "Item Type", autoFocus: true %>
-        <%#  <%= f.integer_field :size class: "form-control", id: "item-size-input", placeholder: "Item Size", autoFocus: true %>
           <%= f.text_field :description, class: "form-control", id: "item-description-input", placeholder: "Item Description", autoFocus: true %>
+
+          <%= f.label :images %>
+          <%= file_field_tag :image, multiple: true %>
             </div>
         <%= f.submit "Save", class: "btn btn-success" %>
         <button id="cancel-item-popover" class="btn btn-secondary">Cancel</button>
        <% end %>
+
        </div>
     </div>
     <div class="col-md-4">

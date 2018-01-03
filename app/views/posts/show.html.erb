@@ -1,0 +1,25 @@
+
+<main class="container-home">
+
+  <div class="jumbotron">
+
+    <div class="container text-center">
+
+      <h1><u>Important Information</u></h1>
+      <p>Bit 'O' Woods Farm</p>
+
+    </div>
+  </div>
+
+  <%= render "layouts/navbar.html" %>
+
+  <div class="container-fluid">
+
+  <%= render "sidebar.html", :collection => @posts %>
+
+  <div class="col-sm-9">
+    <%= render 'post', post: @post %>
+    <h5><small>
+    <%= link_to "Edit Post", edit_post_path(@post) %>
+    <%= link_to "Destroy Post ", @post, :method => :delete %></small></h5>
+ </div>
