@@ -1,0 +1,32 @@
+$color_1: white;
+$background_color_1: rgba(251, 248, 245, 0.98);
+$background_color_2: #555;
+
+.row.content {
+  margin-top: 3%;
+	height: 1500px;
+}
+.sidenav {
+	background-color: $background_color_1;
+	height: 100%;
+}
+
+footer {
+	background-color: $background_color_2;
+	color: $color_1;
+	padding: 15px;
+}
+@media screen and (max-width: 767px) {
+	.sidenav {
+		height: auto;
+		padding: 15px;
+	}
+	.row.content {
+		height: auto;
+	}
+}
+
+
+.post-form-container {
+	margin-top: 2%;
+}

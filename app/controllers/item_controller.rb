@@ -1,5 +1,6 @@
 class ItemController < ApplicationController
 
+
   def index
     @items = Item.all
     @item = Item.new
@@ -25,6 +26,7 @@ class ItemController < ApplicationController
     end
 
     def update
+  
     end
 
     def delete
@@ -33,7 +35,7 @@ class ItemController < ApplicationController
     private
 
     def item_params
-      params.require(:item).permit(:short_desc, :size, :description)
+      params.require(:item).permit(:short_desc, :size, :description, :image)
     end
 
 end
