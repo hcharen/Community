@@ -18,9 +18,9 @@
          <div class="form-group">
           <%= f.text_field :short_desc, class: "form-control", id: "item-name-input", placeholder: "Item Type", autoFocus: true %>
           <%= f.text_field :description, class: "form-control", id: "item-description-input", placeholder: "Item Description", autoFocus: true %>
-
+          <div class="image-input">
           <%= f.label :images %>
-          <%= file_field_tag :image, multiple: true %>
+          <%= file_field_tag :image, multiple: true %></div>
             </div>
         <%= f.submit "Save", class: "btn btn-success" %>
         <button id="cancel-item-popover" class="btn btn-secondary">Cancel</button>
