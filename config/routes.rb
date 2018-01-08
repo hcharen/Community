@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   # makes the url /items, instead of /items/index
   get 'items', to: 'item#index'
   # root to the item#index
