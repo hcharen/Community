@@ -1,0 +1,2 @@
+class LoungeController < ApplicationController
+end

@@ -8,6 +8,7 @@
     .nav-item {
       margin-right: 1rem;
 
+
       &:last-child {
         margin-right: 0;
       }
@@ -45,4 +46,13 @@
       }
     }
   }
+}
+
+
+.nav-btns {
+	margin-left: 10%;
+}
+
+.placeholder-btn {
+  color: rgba(251, 248, 245, 0.98);
 }
