@@ -1,18 +1,19 @@
 
-<main class="container-home">
+ <main class="container-home">
   <div class="jumbotron">
     <div class="container text-center">
       <h1><u>Community</u></h1>
       <p>Bit 'O' Woods Farm</p>
     </div>
   </div>
+
 <%= render "layouts/navbar.html" %>
 
 <h1 class="project-title text-center">TEST?</h1>
 
 
 <div class="row">
-      <%= render "feature_card", feature_link: '', title: "The Lounge", description: "Hangout and chat about horse related stuff..." %>
+      <%= render "feature_card", feature_link: '/conversations', title: "The Lounge", description: "Hangout and chat about horse related stuff..." %>
       <%= render "feature_card", feature_link: '/posts', title: "Important Information", description: "Important updates regarding barn schedule and horses" %>
       <%= render "feature_card", feature_link: '', title: "To-dos", description: "Make a list of shit that needs to get done" %>
       <%= render "feature_card", feature_link: 'https://goo.gl/maps/3u7Yq66F7hr', title: "Show Schedule", description: "BOW Show Season" %>

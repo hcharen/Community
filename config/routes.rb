@@ -10,7 +10,23 @@ Rails.application.routes.draw do
   # get the route to the show page for each individual item
   get 'items/:id', to: 'item#show', as: 'item'
 
+  resources :conversations, only: [:create] do
+   member do
+     post :close
+   end
+ end
+
+
+
   resources :posts
+
+  resources :conversations do
+    resources :messages, only: [:create]
+  end
+
+
+
+  resources :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
