@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   resources :posts
 
   resources :conversations do
-    resources :messages, only: [:create]
+    
   end
 
 

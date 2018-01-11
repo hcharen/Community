@@ -38,5 +38,5 @@ class ConversationsController < ApplicationController
   def conversated?
     session[:conversations].include?(@conversation.id)
   end
-  
+
 end

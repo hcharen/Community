@@ -11,6 +11,7 @@
   </div>
 
   <%= render "layouts/navbar.html" %>
+
 <div class="row">
 <div class="col-md-9">
   <ul id="conversations-list">
@@ -37,9 +38,10 @@
       </div>
     </div>
   </div>
-</div>
+
 
  <%= @conversations.each do |conversation| %>
  <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
  <% end %>
 </main>
+</div>
