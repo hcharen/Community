@@ -16,12 +16,18 @@ Rails.application.routes.draw do
    end
  end
 
+ resources :schedule do
+   collection do
+     get :map
+   end
+ end
+
 
 
   resources :posts
 
   resources :conversations do
-    
+
   end
 
 
