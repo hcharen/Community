@@ -8,10 +8,29 @@ Event Map</u></h1>
 
     </div>
   </div>
-
   <%= render "layouts/navbar.html" %>
 
-  <div id="map"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9" id="map">
+      <%# <div id="map">
+      </div> %>
+      </div>
+
+
+  <div class="col-sm-3">
+    <div id="content-window"></div>
+  </div>
+</div>
+</div>
+
+</main>
+
+
+
+
+
     <script>
 
       function initMap() {
@@ -22,9 +41,19 @@ Event Map</u></h1>
 
         var ctaLayer = new google.maps.KmlLayer({
           url: 'https://s3.us-east-2.amazonaws.com/communitykml/Area+II.kml',
+          suppressInfoWindows: true,
           map: map
         });
-      }
+        ctaLayer.addListener('click', function(kmlEvent) {
+    var text = kmlEvent.featureData.description;
+    showInContentWindow(text);
+  });
+
+  function showInContentWindow(text) {
+    var sidediv = document.getElementById('content-window');
+    sidediv.innerHTML = text;
+    }
+  }
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyr5QDS0ob48bawfcVidHAw4rJ7uxmwwk&callback=initMap">
