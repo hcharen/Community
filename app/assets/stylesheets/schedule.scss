@@ -2,8 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.main.container {
+  overflow-y: hidden;
+}
+
 #map {
-       width: 100%;
+       width: 50%;
        height: 400px;
        background-color: grey;
       }
+
+#content-window {
+    margin-top: 2%;
+     word-break: break-all;
+     font-size: .75em;
+}
+
+
+.row.content {
+  margin-top: -.0525%;
+  margin-left: .5%;
+  padding: 0;
+  height: 500px;
+}

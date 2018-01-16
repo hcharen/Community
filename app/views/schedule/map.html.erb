@@ -11,9 +11,9 @@ Event Map</u></h1>
   <%= render "layouts/navbar.html" %>
 
 
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-9" id="map">
+
+    <div class="row content">
+      <div class="col-sm-9" id="map">
       <%# <div id="map">
       </div> %>
       </div>
@@ -25,7 +25,7 @@ Event Map</u></h1>
 </div>
 </div>
 
-</main>
+
 
 
 
@@ -41,7 +41,6 @@ Event Map</u></h1>
 
         var ctaLayer = new google.maps.KmlLayer({
           url: 'https://s3.us-east-2.amazonaws.com/communitykml/Area+II.kml',
-          suppressInfoWindows: true,
           map: map
         });
         ctaLayer.addListener('click', function(kmlEvent) {

@@ -27,6 +27,9 @@ body {
   line-height: 1.5;
   margin-top: 0;
   font-size: 1.7rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  
 }
 
 main.container {
