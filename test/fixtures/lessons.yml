@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lesson_time: 2018-01-15 23:26:28
+  duration: 1
+  location: one
+  user: one
+  client: one
+  horse: one
+
+two:
+  lesson_time: 2018-01-15 23:26:28
+  duration: 1
+  location: two
+  user: two
+  client: two
+  horse: two

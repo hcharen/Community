@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180114235027) do
+ActiveRecord::Schema.define(version: 20180120090607) do
+
+  create_table "clients", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_clients_on_user_id"
+  end
 
   create_table "conversations", force: :cascade do |t|
     t.integer "recipient_id"
@@ -20,6 +29,37 @@ ActiveRecord::Schema.define(version: 20180114235027) do
     t.index ["recipient_id", "sender_id"], name: "index_conversations_on_recipient_id_and_sender_id", unique: true
     t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
     t.index ["sender_id"], name: "index_conversations_on_sender_id"
+  end
+
+  create_table "event_series", force: :cascade do |t|
+    t.integer "frequency"
+    t.string "period"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.boolean "all_day"
+    t.integer "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_series_on_event_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "all_day"
+    t.integer "event_series_id"
+  end
+
+  create_table "horses", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_horses_on_user_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -32,6 +72,33 @@ ActiveRecord::Schema.define(version: 20180114235027) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.datetime "lesson_time"
+    t.integer "duration"
+    t.integer "location_id"
+    t.integer "user_id"
+    t.integer "client_id"
+    t.integer "horse_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_lessons_on_client_id"
+    t.index ["horse_id"], name: "index_lessons_on_horse_id"
+    t.index ["location_id"], name: "index_lessons_on_location_id"
+    t.index ["user_id"], name: "index_lessons_on_user_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.string "street_address"
+    t.string "state"
+    t.string "zipcode"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|

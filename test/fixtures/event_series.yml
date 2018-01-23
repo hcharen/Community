@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  frequency: 1
+  period: MyString
+  starttime: 2018-01-20 04:06:07
+  endtime: 2018-01-20 04:06:07
+  all_day: false
+  event: one
+
+two:
+  frequency: 1
+  period: MyString
+  starttime: 2018-01-20 04:06:07
+  endtime: 2018-01-20 04:06:07
+  all_day: false
+  event: two

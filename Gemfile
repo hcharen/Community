@@ -7,6 +7,12 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'\
+
+
+gem 'fullcalendar-rails'
+
+gem 'momentjs-rails'
+
 gem 'devise'
 
 gem 'simple_form'
