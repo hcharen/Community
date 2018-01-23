@@ -5,7 +5,7 @@ class ScheduleController < ApplicationController
 end
 
   def index
-    @schedules = Schedule.all
+    
   end
 
   def show
